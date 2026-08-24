@@ -491,12 +491,7 @@
       height: 60%;
       top: auto;
       bottom: 0;
-      background: linear-gradient(
-        0deg,
-        var(--sw-bg) 8%,
-        color-mix(in srgb, var(--sw-bg) 70%, transparent) 46%,
-        transparent 100%
-      );
+      background: linear-gradient(0deg, #22211e 0%, color-mix(in srgb, #34312d 82%, transparent) 34%, color-mix(in srgb, #42403c 40%, transparent) 62%, transparent 100%);
     }
     .sw-copy {
       left: clamp(18px, 5vw, 64px);
