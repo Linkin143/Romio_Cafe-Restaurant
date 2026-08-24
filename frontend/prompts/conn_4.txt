@@ -1,0 +1,16 @@
+CONNECTOR 4: events -> finale (into the hero-product finale)
+START IMAGE: LAST frame of assets/vid/events.mp4 (extract from the RENDERED video)
+END IMAGE:   FIRST frame of assets/vid/finale.mp4 (extract from the RENDERED video)
+(Both frames come from the actual rendered clips, NOT the stills.)
+
+Single continuous cinematic camera move, no cuts. The camera smoothly pulls up and back
+out of the private event alcove, rising above the miniature world, then glides forward
+and the world dissolves toward a single hero signature dish and house cocktail floating
+in soft cream space, arriving gracefully in front of it. One connected miniature clay
+world floating in a plain solid #F5EDE0 void — empty backdrop, no sky, no clouds —
+seamless flowing aerial transition. Soft matte clay diorama, tilt-shift miniature, warm
+inviting light, palette of terracotta, gold, olive, mauve, deep plum, cream. Smooth
+graceful slow motion. No text, no captions.
+
+Render params (seedance): --mode std --resolution 1080p --aspect_ratio 16:9 --duration 5
+Output: assets/vid/conn4.mp4

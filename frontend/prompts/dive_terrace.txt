@@ -1,0 +1,14 @@
+START IMAGE: assets/terrace.webp (the rooftop terrace still, solid #F5EDE0 background)
+
+Single continuous cinematic camera move, no cuts. Begin high and far, looking down at
+the whole rooftop terrace from outside like a tiny model. The camera slowly glides
+forward and descends toward it, sweeping in toward the string-lit bistro tables and
+the skyline edge, as if flying onto the rooftop. As the camera pushes in, the terrace
+opens warmly to reveal the lounge seating and glowing city beyond. The backdrop stays
+a plain solid #F5EDE0 the whole time — completely empty, no sky, no clouds, no horizon,
+no ground. Soft matte clay diorama, tilt-shift miniature, warm golden-hour light,
+palette of terracotta, gold, olive, mauve, deep plum, cream. Smooth, graceful, slow
+motion, subtle parallax. No text, no captions.
+
+Render params (seedance): --mode std --resolution 1080p --aspect_ratio 16:9 --duration 8
+Output: assets/vid/terrace.mp4

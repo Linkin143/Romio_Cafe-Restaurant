@@ -1,0 +1,13 @@
+START IMAGE: assets/finale.webp (the hero dish + cocktail still, solid #F5EDE0 background)
+
+Single continuous cinematic camera move, no cuts. The camera flies slowly forward
+toward the single hero signature dish and house cocktail on their pedestal, easing in
+close as they nearly fill the frame, with a gentle graceful settle and the faintest
+orbit so the plating and garnish catch the warm light. The backdrop stays a plain solid
+#F5EDE0 the whole time — completely empty, no sky, no clouds, no horizon, no ground.
+Soft matte clay diorama, tilt-shift miniature, warm inviting light, palette of
+terracotta, gold, olive, mauve, deep plum, cream. Smooth, graceful, slow motion,
+subtle parallax. No text, no captions.
+
+Render params (seedance): --mode std --resolution 1080p --aspect_ratio 16:9 --duration 8
+Output: assets/vid/finale.mp4

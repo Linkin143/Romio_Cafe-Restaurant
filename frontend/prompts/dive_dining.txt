@@ -1,0 +1,14 @@
+START IMAGE: assets/dining.webp (the candlelit dining room still, solid #F5EDE0 background)
+
+Single continuous cinematic camera move, no cuts. Begin high and far, looking down at
+the whole candlelit dining area from outside like a tiny model. The camera slowly
+glides forward and descends toward it, sweeping in toward the linen-dressed tables and
+the flickering candles, as if flying inside. As the camera pushes in, the warm amber
+pendant lamps and plated dishes are revealed. The backdrop stays a plain solid #F5EDE0
+the whole time — completely empty, no sky, no clouds, no horizon, no ground. Soft matte
+clay diorama, tilt-shift miniature, warm intimate light, palette of terracotta, gold,
+olive, mauve, deep plum, cream. Smooth, graceful, slow motion, subtle parallax. No
+text, no captions.
+
+Render params (seedance): --mode std --resolution 1080p --aspect_ratio 16:9 --duration 8
+Output: assets/vid/dining.mp4

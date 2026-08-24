@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Romio Café &amp; Restaurant — Rooftop dining above the city</title>
+  <meta name="description" content="Scroll to fly through Romio Café & Restaurant — a rooftop dining world of skyline terraces, craft cocktails and candlelit tables. Reserve your evening above the city." />
+  <meta property="og:title" content="Romio Café & Restaurant" />
+  <meta property="og:description" content="Rooftop dining above the city. Scroll to fly through the world of Romio." />
+  <meta property="og:type" content="website" />
+  <!-- All page styles live in index.css (brand tokens + engine CSS).
+       scrub-engine.js contains no CSS of its own. -->
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div id="top"></div>
+  <div id="world"></div>
+
+  <script src="scrub-engine.js"></script>
+  <script>
+    // ----------------------------------------------------------------------
+    // Romio Café & Restaurant — reservation link.
+    // Replace RESERVE_URL with your District booking/website URL.
+    // ----------------------------------------------------------------------
+    var RESERVE_URL = 'https://your-district-website.example.com/reserve';
+
+    mountLetsScroll(document.getElementById('world'), {
+      brand: { name: 'Romio Café & Restaurant', href: '#top', logo: 'assets/logo/company_logo.png' },
+      cta: { label: 'Reserve a Table', href: RESERVE_URL },
+      hint: 'scroll to fly in',
+      diveScroll: 1.3,
+      connScroll: 0.9,
+      sections: [
+        {
+          id: 'terrace', label: 'The Rooftop',
+          still: 'assets/terrace.webp',
+          clip: 'assets/vid/terrace.mp4',
+          accent: '#D4A843',
+          scroll: 1.7, linger: 0.4,
+          eyebrow: 'Above the city',
+          title: 'Sky-high dining starts here.',
+          body: 'Step onto an open rooftop terrace, string lights overhead and the skyline glowing at golden hour.',
+          tags: ['Rooftop terrace', 'Skyline views', 'Golden hour'],
+        },
+        {
+          id: 'bar', label: 'The Craft Bar',
+          still: 'assets/bar.webp',
+          clip: 'assets/vid/bar.mp4',
+          accent: '#C85C3A',
+          eyebrow: 'Handcrafted',
+          title: 'Every sip, crafted by hand.',
+          body: 'Fresh herbs, house infusions and a bartender who treats each cocktail like a signature.',
+          tags: ['Craft cocktails', 'Fresh herbs', 'House infusions'],
+        },
+        {
+          id: 'dining', label: 'The Table',
+          still: 'assets/dining.webp',
+          clip: 'assets/vid/dining.mp4',
+          accent: '#6B7C3E',
+          eyebrow: 'Warm & intimate',
+          title: 'The perfect table, every time.',
+          body: 'Candlelight, crisp linen and a seasonal kitchen that plates every dish with care.',
+          tags: ['Seasonal menu', 'Candlelit', 'Chef-plated'],
+        },
+        {
+          id: 'events', label: 'Private Events',
+          still: 'assets/events.webp',
+          clip: 'assets/vid/events.mp4',
+          accent: '#9B6B8A',
+          eyebrow: 'Special occasions',
+          title: 'Your celebration, elevated.',
+          body: 'A private rooftop alcove for birthdays, proposals and gatherings that deserve a view.',
+          tags: ['Private dining', 'Celebrations', 'Bespoke menus'],
+        },
+        {
+          id: 'finale', label: 'Reserve Tonight',
+          still: 'assets/finale.webp',
+          clip: 'assets/vid/finale.mp4',
+          accent: '#3A2230',
+          scroll: 1.7, linger: 0.45,
+          eyebrow: 'And it all comes together',
+          title: 'Book your evening above the city.',
+          body: 'One signature plate, one house cocktail, one unforgettable rooftop night — reserve your table at Romio.',
+          tags: [],
+          cta: {
+            primary: { label: 'Reserve a Table', href: RESERVE_URL },
+            secondary: { label: 'View Menu', href: RESERVE_URL },
+          },
+        },
+      ],
+      // length === sections.length - 1 (4 connectors). Generated per prompts/conn_*.txt.
+      connectors: [
+        'assets/vid/conn1.mp4',   // terrace -> bar
+        'assets/vid/conn2.mp4',   // bar -> dining
+        'assets/vid/conn3.mp4',   // dining -> events
+        'assets/vid/conn4.mp4',   // events -> finale
+      ],
+    });
+  </script>
+</body>
+</html>

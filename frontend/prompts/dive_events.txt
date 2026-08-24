@@ -1,0 +1,14 @@
+START IMAGE: assets/events.webp (the private event alcove still, solid #F5EDE0 background)
+
+Single continuous cinematic camera move, no cuts. Begin high and far, looking down at
+the whole private event alcove from outside like a tiny model. The camera slowly glides
+forward and descends toward it, sweeping in toward the long celebration table and the
+floral centerpiece, as if flying inside. As the camera pushes in, the champagne bucket,
+taper candles and string-light arch are revealed in a warm romantic glow. The backdrop
+stays a plain solid #F5EDE0 the whole time — completely empty, no sky, no clouds, no
+horizon, no ground. Soft matte clay diorama, tilt-shift miniature, warm romantic light,
+palette of terracotta, gold, olive, mauve, deep plum, cream. Smooth, graceful, slow
+motion, subtle parallax. No text, no captions.
+
+Render params (seedance): --mode std --resolution 1080p --aspect_ratio 16:9 --duration 8
+Output: assets/vid/events.mp4
