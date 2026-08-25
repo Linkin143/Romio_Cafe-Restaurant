@@ -11,6 +11,9 @@
   <!-- All page styles live in index.css (brand tokens + engine CSS).
        scrub-engine.js contains no CSS of its own. -->
   <link rel="stylesheet" href="index.css" />
+  <!-- Lenis — site-wide smooth scrolling. Loaded before the engine so
+       window._lenis is available when the page script runs. -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
 </head>
 <body>
   <div id="top"></div>
@@ -96,6 +99,29 @@
         'assets/vid/conn4.mp4',   // events -> finale
       ],
     });
+
+    // ----------------------------------------------------------------------
+    // Lenis — site-wide smooth scrolling.
+    // The scrub engine reads window.scrollY every scroll event; Lenis drives
+    // that value smoothly via progressive window.scrollTo() each frame, so the
+    // camera-flight scrubbing simply follows the eased scroll position.
+    // window._lenis is the bridge the engine's jumpTo() uses for nav clicks.
+    // Skipped entirely when the user prefers reduced motion.
+    // ----------------------------------------------------------------------
+    if (typeof Lenis !== 'undefined' &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var lenis = new Lenis({
+        duration: 1.2,
+        easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+        orientation: 'vertical',
+        smoothWheel: true,
+      });
+      window._lenis = lenis;
+      (function tick(time) {
+        lenis.raf(time);
+        requestAnimationFrame(tick);
+      })(performance.now());
+    }
   </script>
 </body>
 </html>

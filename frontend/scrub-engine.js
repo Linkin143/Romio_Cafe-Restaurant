@@ -132,7 +132,15 @@ function mountLetsScroll(container, config) {
 
   function jumpTo(i) {
     const seg = SECTIONS[i]._seg;
-    window.scrollTo({ top: seg.start + (seg.end - seg.start) * 0.5, behavior: reduce ? 'auto' : 'smooth' });
+    const top = seg.start + (seg.end - seg.start) * 0.5;
+    // Prefer Lenis when it's driving the page (index.html sets window._lenis),
+    // so nav-dot / top-nav clicks glide through the smooth-scroll engine rather
+    // than the browser's native smooth behavior (which would fight Lenis).
+    if (window._lenis) {
+      window._lenis.scrollTo(top, { duration: reduce ? 0 : 1.2 });
+    } else {
+      window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
+    }
   }
 
   function loadClip(s) {
